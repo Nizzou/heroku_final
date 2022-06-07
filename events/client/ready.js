@@ -7,7 +7,7 @@ module.exports  = {
 
         Logger.client("- Connecté");
         
-        client.user.setPresence({ activities: [{ name: '!help', type: 'WATCHING'}], status: 'dnd'});
+        client.user.setPresence({ activities: [{ name: '!help', type: 'WATCHING', url: 'https://discord.com/api/oauth2/authorize?client_id=975909880772837417&permissions=8&scope=bot'}], status: 'dnd'});
 
 
         // const devGuild = await client.guilds.cache.get('971132553530601543');
