@@ -32,14 +32,4 @@ mongoose.connect(process.env.DATABASE_URI, {
 }).then(() => { Logger.client('- Connecté à la base de données'); })
 .catch(err => { Logger.error(err); });
 
-    //Statut
-    const statuses = [
-      () => `!help`
-  ]
-let i = 0
-setInterval(() => {
-        client.user.setActivity(statuses[i](), {type: 'WATCHING'})
-        i = ++i % statuses.length
-    }, 1e4)
-
 client.login(process.env.DISCORD_TOKEN);
